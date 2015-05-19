@@ -1,0 +1,18 @@
+<?php
+function pet_menu() {
+    $items = array();
+    $items['pet_name'] = array(
+        'title' => "Pet",
+        'page callback' => 'say_pet',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+
+    );
+
+    return $items;
+}
+
+function say_pet() {
+   return '<p>This is my pet, Big Bird!</p>';
+  // <img src="images/bird.jpg">
+}
