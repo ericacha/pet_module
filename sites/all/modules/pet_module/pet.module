@@ -1,0 +1,19 @@
+<?php
+function pet_menu() {
+    $items = array();
+    $items['pet_name'] = array(
+        'title' => "Pet",
+        'page callback' => 'say_pet',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+
+    );
+
+    return $items;
+}
+
+function say_pet() {
+   return '<p>This is my pet, Big Bird!</p>
+  <p> <img src="sites/all/modules/pet_module/images/bird.jpg"></p>
+  <p> <a href="http://www.slate.com/blogs/wild_things/2014/01/23/where_do_birds_sleep_roosting_in_nests_water_flocks_cavities.html">Read to learn more!</a></p>';
+}
